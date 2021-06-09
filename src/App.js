@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import Board from "./components/Board";
+import GameFinished from "./components/GameFinished";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			is_game_won: false,
+			grid_size: 6,
+		};
+	}
+componentDidMount() {
+}
+
+gameWon = () => {
+	console.log('doing it')
+	this.setState({is_game_won: true});
+};
+
+
+	render() {
+		return (
+			<div className="App" >
+				<header className="App-header">Tarot Memory Game</header>
+				<div className="game-options-container">
+					<div className="game-options"></div>
+				</div>
+				<Board
+				
+					grid_size={this.state.grid_size}
+					gameWon={this.gameWon}
+				/>
+				{this.state.is_game_won ? (
+					<GameFinished />
+				) : null}
+			</div>
+		);
+	}
 }
 
 export default App;

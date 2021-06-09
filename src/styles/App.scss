@@ -1,0 +1,46 @@
+@import "./variables";
+
+body {
+	background: $purple;
+	width: 100%;
+}
+
+.App {
+	@include flex(column, center);
+}
+
+header {
+	color: $text;
+	font-size: xx-large;
+	@include flexCenter;
+	@include default-padding;
+}
+.centered {
+	@include flexCenter;
+}
+
+.game-options-container {
+	width: 40%;
+	@include default-padding;
+	.game-options {
+		@include flex(row, space-evenly);
+	}
+}
+
+.board {
+	width: 95%;
+	height: 40em;
+	background: $lavender;
+	@include flex(column, space-around);
+	.board-row {
+		@include flex(row, space-around);
+	}
+}
+
+.tarot-card {
+	@include card-format;
+}
+.tarot-card[disabled] {
+	pointer-events: none;
+	opacity: 0.7;
+}

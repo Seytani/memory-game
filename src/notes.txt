@@ -1,0 +1,8 @@
+***** TO - DO *****
+
+disable single card when clicked
+center board and cards
+header
+game options
+center card background
+remove opacity when pair found

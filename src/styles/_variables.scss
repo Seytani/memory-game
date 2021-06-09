@@ -1,0 +1,31 @@
+$purple: #74546A;
+$lavender: #843B62;
+$coral: #F67E7D;
+$text: #FFEECF;
+$turqoise: #0F7173;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($direction: row, $flex-type: space-between) {
+    display: flex;
+    justify-content: $flex-type;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+@mixin default-padding {
+    padding: 2em;
+}
+
+@mixin card-format {
+    border-radius: 25px;
+    background-image: url(../assets/card-back.jpg);
+    background-size: cover;
+    border: 6px solid white;
+    width: 10em;
+    height: 18em;
+}

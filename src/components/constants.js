@@ -1,0 +1,136 @@
+const deck = {
+	0: {
+		name: "The Fool",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/03/the-fool-tarot-card.jpg",
+	},
+	1: {
+		name: "The Magician",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/03/the-magician-tarot-card.jpg",
+	},
+	2: {
+		name: "The High Priestess",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2019/11/the-high-priestess-tarot-card.jpg",
+	},
+	3: {
+		name: "The Empress",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/02/the-empress-tarot-card.jpg",
+	},
+	4: {
+		name: "The Emperor",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2019/08/the-emperor-tarot-card.jpg",
+	},
+	5: {
+		name: "The Hieropant",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2019/10/the-hierophant-tarot.jpg",
+	},
+	6: {
+		name: "The Lovers",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/07/the-lovers-tarot-card.jpg",
+	},
+	7: {
+		name: "The Chariot",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/07/the-chariot-tarot-card.jpg",
+	},
+	8: {
+		name: "Strength",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/07/strength-tarot-card.jpg",
+	},
+	9: {
+		name: "The Hermit",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/09/the-hermit-tarot-card-meaning-rider-waite.jpg",
+	},
+	10: {
+		name: "Wheel of Fortune",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/wheel-of-fortune-tarot-card.jpg",
+	},
+	11: {
+		name: "Justice",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/justice-tarot-card-meaning.jpg",
+	},
+	12: {
+		name: "The Hanged Man",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2019/09/the-hanged-man-tarot-card-1.jpg",
+	},
+	13: {
+		name: "Death",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/death-tarot-card-image.jpg",
+	},
+	14: {
+		name: "Temperance",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/temperance-card-in-tarot.jpg",
+	},
+	15: {
+		name: "The Devil",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/the-devil-card-upright.jpg",
+	},
+	16: {
+		name: "The Tower",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/the-tower-tarot-card-meaning.jpg",
+	},
+	17: {
+		name: "The Star",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/the-star-card-in-tarot.jpg",
+	},
+	18: {
+		name: "The Moon",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/the-moon-tarot-card-original.jpg",
+	},
+	19: {
+		name: "The Sun",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/the-sun-card-tarot-reading.jpg",
+	},
+	20: {
+		name: "Judgement",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/judgement-tarot-card-design.jpg",
+	},
+	21: {
+		name: "The World",
+		active: false,
+		disabled: false,
+		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2020/10/the-world-tarot-card.jpg",
+	},
+};
+
+export default deck;
