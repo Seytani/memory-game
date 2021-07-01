@@ -33,7 +33,7 @@ const deck = {
 		name: "The Hieropant",
 		active: false,
 		disabled: false,
-		url: "https://www.alittlesparkofjoy.com/wp-content/uploads/2019/10/the-hierophant-tarot.jpg",
+		url: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-hierophant.jpg",
 	},
 	6: {
 		name: "The Lovers",

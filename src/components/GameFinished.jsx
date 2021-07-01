@@ -1,9 +1,13 @@
 import React from "react";
 import { Button, Header, Icon, Modal } from "semantic-ui-react";
 
-const GameFinished = () => {
+const GameFinished = (props) => {
 	const [open, setOpen] = React.useState(true);
 
+	let handleNewGame = () => {
+		setOpen(false);
+		props.startNewGame();
+	};
 	return (
 		<Modal
 			basic
@@ -17,15 +21,13 @@ const GameFinished = () => {
 				Yay! You found all pairs!
 			</Header>
 			<Modal.Content>
-				<p className='centered'>
-					Do you want to play again?
-				</p>
+				<p className="centered">Do you want to play again?</p>
 			</Modal.Content>
-			<Modal.Actions className='centered'>
+			<Modal.Actions className="centered">
 				<Button basic color="yellow" inverted onClick={() => setOpen(false)}>
 					<Icon name="remove" /> Nope
 				</Button>
-				<Button color="violet" inverted onClick={() => setOpen(false)}>
+				<Button color="violet" inverted onClick={() => handleNewGame()}>
 					<Icon name="checkmark" /> Yes
 				</Button>
 			</Modal.Actions>

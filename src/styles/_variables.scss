@@ -1,7 +1,7 @@
 $purple: #74546A;
-$lavender: #843B62;
+$lavender: #8d3a78;
 $coral: #F67E7D;
-$text: #FFEECF;
+$text: #fff;
 $turqoise: #0F7173;
 
 @mixin flexCenter {
@@ -21,11 +21,3 @@ $turqoise: #0F7173;
     padding: 2em;
 }
 
-@mixin card-format {
-    border-radius: 25px;
-    background-image: url(../assets/card-back.jpg);
-    background-size: cover;
-    border: 6px solid white;
-    width: 10em;
-    height: 18em;
-}

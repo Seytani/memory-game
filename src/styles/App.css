@@ -1,6 +1,6 @@
 body {
-  background: #74546A;
-  width: 100%;
+  background-image: url(../assets/back1.jpg);
+  background-size: cover;
 }
 
 .App {
@@ -19,9 +19,9 @@ body {
           align-items: center;
 }
 
-header {
-  color: #FFEECF;
-  font-size: xx-large;
+.App-header {
+  width: 600px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +31,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2em;
+  margin-top: 1em;
+  padding: 4em;
+  background-image: url(../assets/match-tarot3.png);
 }
 
 .centered {
@@ -47,35 +49,30 @@ header {
 }
 
 .game-options-container {
-  width: 40%;
-  padding: 2em;
+  padding: 3em;
 }
 
-.game-options-container .game-options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#start-btn {
+  background: #8d3a78;
+  color: #fff;
+  font-size: large;
+  margin-left: 1em;
 }
 
 .board {
-  width: 95%;
+  position: relative;
+  width: 98%;
   height: 40em;
-  background: #843B62;
+  padding: 1em;
+  background: #8d3a78;
+  opacity: 95%;
+  border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -85,32 +82,54 @@ header {
           align-items: center;
 }
 
-.board .board-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .tarot-card {
-  border-radius: 25px;
-  background-image: url(../assets/card-back.jpg);
-  background-size: cover;
-  border: 6px solid white;
-  width: 10em;
-  height: 18em;
+  position: relative;
+  height: 230px;
+  width: 120px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-.tarot-card[disabled] {
+.tarot-card .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.tarot-card .content .back,
+.tarot-card .content .front {
+  position: absolute;
+  border: 6px solid white;
+  border-radius: 25px;
+  height: 230px;
+  width: 120px;
+  background-image: url(../assets/card-back.jpg);
+  background-position: center;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.tarot-card .content .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.tarot-card.active .content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+[disabled] {
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=App.css.map */

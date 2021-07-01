@@ -1,46 +1,88 @@
 @import "./variables";
 
 body {
-	background: $purple;
-	width: 100%;
+	background-image: url(../assets/back1.jpg);
+	background-size: cover;
 }
 
 .App {
 	@include flex(column, center);
 }
 
-header {
-	color: $text;
-	font-size: xx-large;
+.App-header {
+	width: 600px;
+	height: 150px;
 	@include flexCenter;
-	@include default-padding;
+	margin-top: 1em;
+	padding: 4em;
+	background-image: url(../assets/match-tarot3.png);
 }
 .centered {
 	@include flexCenter;
 }
 
 .game-options-container {
-	width: 40%;
-	@include default-padding;
-	.game-options {
-		@include flex(row, space-evenly);
-	}
+	padding: 3em;
+}
+#start-btn {
+	background: $lavender;
+	color: $text;
+	font-size: large;
+	margin-left: 1em;
 }
 
 .board {
-	width: 95%;
+	position: relative;
+	width: 98%;
 	height: 40em;
+	padding: 1em;
 	background: $lavender;
-	@include flex(column, space-around);
-	.board-row {
-		@include flex(row, space-around);
+	opacity: 95%;
+	border-radius: 25px;
+	@include flex(column, center);
+}
+.tarot-card {
+	position: relative;
+	height: 230px;
+	width: 120px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+
+	// }
+	.content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+
+		.back,
+		.front {
+			position: absolute;
+			border: 6px solid white;
+			border-radius: 25px;
+			height: 230px;
+			width: 120px;
+			background-image: url(../assets/card-back.jpg);
+			background-position: center;
+			background-size: cover;
+			backface-visibility: hidden;
+		}
+
+		.front {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&.active {
+		.content {
+			transform: rotateY(180deg);
+			transition: 0.5s;
+		}
 	}
 }
 
-.tarot-card {
-	@include card-format;
-}
-.tarot-card[disabled] {
+[disabled] {
 	pointer-events: none;
-	opacity: 0.7;
+	opacity: 0.8;
 }
