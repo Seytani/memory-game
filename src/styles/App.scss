@@ -37,7 +37,6 @@ body {
 	height: 40em;
 	padding: 1em;
 	background: $lavender;
-	opacity: 95%;
 	border-radius: 25px;
 	@include flex(column, center);
 }
